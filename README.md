@@ -11,3 +11,9 @@
 - build guide: `make`
 - usage guide: `sudo insmod *.ko`, `sudo rmmod eli <TAB>`
   check `/sys/class` dir, `/dev` dir, `/proc/devies` file after insmod
+
+**module_template/**
+- Linux kernel related code
+- template for a lkm;
+- `cp` folder as required as required name, inorder to make use of template
+- build guide: `make`
