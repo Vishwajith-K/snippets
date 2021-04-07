@@ -42,4 +42,5 @@ directly, rather `stdargs.h` header file is used.
 - build guide: `make`
 - usage guide: `sudo insmod *.ko`, `sudo rmmod crea <TAB>`
   `cat /proc/just_d/just` _or_ `echo Hello > /proc/just_d/just`
+- works even for kernel versions > 5.6
 

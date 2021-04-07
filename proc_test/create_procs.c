@@ -2,6 +2,7 @@
 #include <linux/kernel.h>	// Needed for KERN_ALERT
 #include <linux/proc_fs.h>	// for managing procfs stuff
 #include <linux/uaccess.h>	// user space access
+#include <linux/version.h>	// KERNEL_VERSION macro
 
 #define PROC_DIR_NAME "just_d"
 #define PROC_FILE_NAME "just"
@@ -32,11 +33,20 @@ static ssize_t proc_file_write(struct file *filp, const char __user *ubuf,
 	return (*ppos = count);
 }
 
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5,6,0))
 static struct file_operations
+#elif (LINUX_VERSION_CODE >= KERNEL_VERSION(5,6,0))
+static struct proc_ops
+#endif
 proc_file_ops = {
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5,6,0))
  owner : THIS_MODULE,
  read : proc_file_read,
  write : proc_file_write
+#elif (LINUX_VERSION_CODE >= KERNEL_VERSION(5,6,0))
+ proc_read : proc_file_read,
+ proc_write : proc_file_write
+#endif
 };
 
 int __init init_module(void)
