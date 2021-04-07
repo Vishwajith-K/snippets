@@ -1,0 +1,16 @@
+# kernel object files
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.o
+*.order
+*.symvers
+.*.ko.cmd
+.*mod.cmd
+.*.mod.o.cmd
+.*.o.cmd
+
+# editor
+*.*~
+*~
