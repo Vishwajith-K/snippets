@@ -33,3 +33,13 @@ create symbolic links to `bell` as `bell 3` is same as `bell3`
 ellipsis `...`. Parsing variable number of arguments is not done (typically)
 directly, rather `stdargs.h` header file is used.
 - build guide: `gcc -o varargs varargs.c -lm`
+
+**proc_test/**
+- Linux kernel realted code
+- creates a directory file in proc file
+- creates a text file in the directory
+- read and writes are allowed to the file (!append)
+- build guide: `make`
+- usage guide: `sudo insmod *.ko`, `sudo rmmod crea <TAB>`
+  `cat /proc/just_d/just` _or_ `echo Hello > /proc/just_d/just`
+
