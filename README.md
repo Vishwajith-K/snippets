@@ -33,3 +33,9 @@ create symbolic links to `bell` as `bell 3` is same as `bell3`
 ellipsis `...`. Parsing variable number of arguments is not done (typically)
 directly, rather `stdargs.h` header file is used.
 - build guide: `gcc -o varargs varargs.c -lm`
+
+**sll/**
+- Singly linked list
+- insert at end, print, delete a/all elements matching a key, delete element based on postion, swap positions of two nodes by using the keys
+- build guide: `gcc sll.c`
+
