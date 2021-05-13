@@ -17,3 +17,12 @@
 - template for a lkm;
 - `cp` folder as required as required name, inorder to make use of template
 - build guide: `make`
+
+**bell/**
+- Often it's annoying to wait for a process to complete, what if get a sound
+once the task is over? This tool helps us to achieve this
+- usage guide: `wait_command && ./bell [bell count]` _or_ `wait_command; ./bell [bell count]`
+- build guide: `gcc -O3 -o bell bell.c`
+- extra tips: add location of `bell` executable to `PATH` environment variable;
+create symbolic links to `bell` as `bell 3` is same as `bell3`
+- sym link: ln -s -T bell bell3
