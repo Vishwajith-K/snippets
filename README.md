@@ -26,3 +26,10 @@ once the task is over? This tool helps us to achieve this
 - extra tips: add location of `bell` executable to `PATH` environment variable;
 create symbolic links to `bell` as `bell 3` is same as `bell3`
 - sym link: ln -s -T bell bell3
+
+**varargs/**
+- How can same definition of `printf` take so many arguments of different types?
+`printf` uses the concept of variable number of arguments and a token called
+ellipsis `...`. Parsing variable number of arguments is not done (typically)
+directly, rather `stdargs.h` header file is used.
+- build guide: `gcc -o varargs varargs.c -lm`
