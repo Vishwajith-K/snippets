@@ -18,3 +18,5 @@
 # user-space executables & object files
 *.out
 *.o
+*.a
+*.so
