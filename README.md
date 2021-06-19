@@ -33,3 +33,12 @@ create symbolic links to `bell` as `bell 3` is same as `bell3`
 ellipsis `...`. Parsing variable number of arguments is not done (typically)
 directly, rather `stdargs.h` header file is used.
 - build guide: `gcc -o varargs varargs.c -lm`
+
+**o_a_so/**
+- Code tries to check whether the passed number is prime or not
+- Value is returned to shell or whatsoever
+- I used this to know about static linked libs, static linked objects
+and that's the sole purpose to start this weird folder `object_archive_shared
+object/`
+- The folder has more folders and they may have babies again. So, corresponding
+folder has a `README.md`
