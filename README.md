@@ -37,7 +37,8 @@ directly, rather `stdargs.h` header file is used.
 **o_a_so/**
 - Code tries to check whether the passed number is prime or not
 - Value is returned to shell or whatsoever
-- I used this to know about static linked libs, static linked objects
+- I used this to know about static linked libs, static linked objects, dynamically
+linked libraries both dynamically linked as well as dynamically loadable
 and that's the sole purpose to start this weird folder `object_archive_shared
 object/`
 - The folder has more folders and they may have babies again. So, corresponding
