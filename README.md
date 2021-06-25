@@ -43,3 +43,21 @@ and that's the sole purpose to start this weird folder `object_archive_shared
 object/`
 - The folder has more folders and they may have babies again. So, corresponding
 folder has a `README.md`
+
+**procs/**
+- Has process related snipptes. Process creation, IPC
+- `fork1.c` demonstrates usage of `fork` and `wait` syscalls & other utility apis
+like `getpid`, `getppid` which return process ID, parent process ID correspondingly.
+- build guide: `gcc -o simplefork fork1.c`
+- `fork2_ipcshared.c` depicts the concept of IPC using shared memory mechanism. The
+file itself has documented about it's working mechanism using comments. Shm concept
+adds less overhead as there'll be no context switches in future after memory is
+mapped into each process's address space.
+- build guide: `gcc -o ipcshm fork2_ipcshared.c`
+- `fork3_ipcpipe.c` depicts IPC using pipes or FIFO mechanism. The file contains
+documented comments. Main bottleneck is, communication can on the pipe is oneway,
+and for two way communication, another pipe has to be created - more/less like UART.
+Unlike shm, extra memory in process address space isn't sucked up for queueing
+mechanism as kernel handles it internally. So kernel must be requested for data
+enque/deque using write/read, which itself adds another context swtiches.
+- build guide: `gcc -o ipcpipe fork3_ipcpipe.c`
