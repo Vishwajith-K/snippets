@@ -61,3 +61,9 @@ Unlike shm, extra memory in process address space isn't sucked up for queueing
 mechanism as kernel handles it internally. So kernel must be requested for data
 enque/deque using write/read, which itself adds another context swtiches.
 - build guide: `gcc -o ipcpipe fork3_ipcpipe.c`
+
+**signals/**
+- An example depicting usage of signals in C.
+- usage guide: `./timer` and hit C-c whenever you wish to exit from busy-loop
+- build guide: `gcc -O3 -o timer timer.c`
+- Code is simple and have added comments as well
