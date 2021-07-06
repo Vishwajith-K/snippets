@@ -67,3 +67,14 @@ enque/deque using write/read, which itself adds another context swtiches.
 - usage guide: `./timer` and hit C-c whenever you wish to exit from busy-loop
 - build guide: `gcc -O3 -o timer timer.c`
 - Code is simple and have added comments as well
+
+**bitwisepy/**
+- An example depicting usage of C functions in Py3
+- Python has no built-in support for bitwise operations, the example tries to show how
+one can develop their own
+- Python's `ctype` library requires no modifications to the existing C code. But requires
+some add-ons on py side
+- More on the library [here](https://docs.python.org/3.6/library/ctypes.html)
+- usage guide: `make` _or_ `make run`
+- build guide: `make build`
+- Python 3 must exist and tested against Python 3.6.9
