@@ -67,3 +67,19 @@ enque/deque using write/read, which itself adds another context swtiches.
 - usage guide: `./timer` and hit C-c whenever you wish to exit from busy-loop
 - build guide: `gcc -O3 -o timer timer.c`
 - Code is simple and have added comments as well
+
+**buf_gbg_queue/**
+- We were said that, linked lists are flexible (relative to arrays);
+but for every new element that gets added to the list, number of calls made
+to mallocs increases and it has it's own delay. More than that, there's an
+extra memory consumed to store next node's location. Buffered queue sits
+in between array based queues and linked-list based queues. Idea is simple,
+data in the node's data will hold more than 1 data i.e., data in linked-list's
+structure is now an array of some pre-defined size. This technique and design
+is simple for queue/stack like structures as the data enters and leaves at ends.
+Design may be complex and inefficient (opinion) for random-in and random-out type
+data structures such as linked lists. 
+- usage guide: `./a.out` and the output displays prime numbers till 100
+- build guide: `gcc -O3 buf_queue.c driver.c`
+- Code is simple to understand
+- Todo - provide a garbage collector which holds deleted nodes of upto some elements
