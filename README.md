@@ -71,15 +71,20 @@ enque/deque using write/read, which itself adds another context swtiches.
 **buf_gbg_queue/**
 - We were said that, linked lists are flexible (relative to arrays);
 but for every new element that gets added to the list, number of calls made
-to mallocs increases and it has it's own delay. More than that, there's an
+to `malloc`s increases and it has it's own delay. More than that, there's an
 extra memory consumed to store next node's location. Buffered queue sits
 in between array based queues and linked-list based queues. Idea is simple,
 data in the node's data will hold more than 1 data i.e., data in linked-list's
 structure is now an array of some pre-defined size. This technique and design
 is simple for queue/stack like structures as the data enters and leaves at ends.
 Design may be complex and inefficient (opinion) for random-in and random-out type
-data structures such as linked lists. 
-- usage guide: `./a.out` and the output displays prime numbers till 100
+data structures such as linked lists.
+- Queue also has an option of holding garbage nodes - predefined amount of nodes
+are not released to the OS immediately after `deque` is done, instead nodes are
+parked next to `rear`. An extra element `gc` in the `queue` structure holds number
+of parked nodes. In the end, garbage again points to queue's front-side element
+`buf_queue.h` file has a text-picture representation on how the nodes are arranged.
+- usage guide: `./a.out`
 - build guide: `gcc -O3 buf_queue.c driver.c`
 - Code is simple to understand
 - Todo - provide a garbage collector which holds deleted nodes of upto some elements
