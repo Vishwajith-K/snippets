@@ -67,3 +67,6 @@ enque/deque using write/read, which itself adds another context swtiches.
 - usage guide: `./timer` and hit C-c whenever you wish to exit from busy-loop
 - build guide: `gcc -O3 -o timer timer.c`
 - Code is simple and have added comments as well
+
+**string_ops/**
+- Snippets which play with strings in C
