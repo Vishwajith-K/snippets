@@ -70,3 +70,14 @@ enque/deque using write/read, which itself adds another context swtiches.
 
 **string_ops/**
 - Snippets which play with strings in C
+
+**dna-decoded/**
+- Codes which help transcribe DNA to mRNA and translate mRNA to protein
+- build guide: `gcc -o dna-mrna dna-mrna`, `gcc -o mrna-protein mrna-protein.c`
+- `dna-mrna` takes DNA sequence and converts to mRNA sequence
+- `mrna-protein` takes mRNA sequence and converts to protein having amino-acids
+- Sequences are input to executables via command-line arguments
+- Note that, input to `mrna-protein` executable must be a string whose length
+is divisible by 3 (may be nature coded 3 in living beings)
+- `mrna-protein` conversion is based on 'codon_wheel.png' image
+- Images & concept are sourced from 'DNA Decoded' course on coursera.org
